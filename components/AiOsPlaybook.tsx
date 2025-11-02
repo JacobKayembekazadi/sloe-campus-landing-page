@@ -13,6 +13,11 @@ const AiOsPlaybook: React.FC = () => {
                         <p className="text-lg text-text-secondary mt-4">
                             You'll learn to connect APIs, manage logic in n8n, and create an end-to-end automated solution that you can sell to service businesses for $2,000/month or more. This is an exact playbook from our expert-led community.
                         </p>
+                        <div className="mt-8">
+                            <a href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-6 py-3 text-base font-semibold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
+                                Get the Full Playbook
+                            </a>
+                        </div>
                     </div>
                     <div>
                         <img src="https://placehold.co/600x450/0F1420/3A9EFF?text=AI+Receptionist+Workflow%0A(n8n+Builder)" 

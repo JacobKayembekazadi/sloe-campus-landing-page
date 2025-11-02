@@ -14,6 +14,12 @@ const ProblemAgitation: React.FC = () => {
                 <p className="text-lg text-text-secondary mt-6">
                     Every day you wait, the gap widens. You're not just missing out on an opportunity; you're risking becoming irrelevant in an economy that is rapidly rewarding builders and replacing watchers.
                 </p>
+                
+                <div className="mt-10">
+                    <a href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
+                        Break Free – Join the Campus
+                    </a>
+                </div>
             </div>
         </section>
     );

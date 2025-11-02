@@ -35,6 +35,13 @@ const ValueCards: React.FC = () => {
                         <p className="text-base text-text-secondary mt-4">Create custom AI-powered research and data analysis tools for clients using Gemini, Perplexity, and NotebookLM.</p>
                     </div>
                 </div>
+                
+                <div className="mt-12 text-center">
+                    <a href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
+                        Start Learning These Skills Now
+                    </a>
+                    <p className="text-sm text-text-secondary mt-3">Full access for $49/month · Cancel anytime</p>
+                </div>
             </div>
         </section>
     );

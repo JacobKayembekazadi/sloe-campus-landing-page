@@ -19,7 +19,16 @@ const Hero: React.FC = () => {
                         The AI economy won't wait. You can either be replaced by it, or build the skills to profit from it. This is the workshop for builders, not watchers.
                     </p>
 
-                    <div className="mt-10 aspect-video w-full max-w-3xl mx-auto rounded-2xl border border-white/10 bg-surface-secondary p-4 shadow-card overflow-hidden">
+                    <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
+                            Join the Campus – $49/month
+                        </a>
+                        <p className="text-sm text-text-secondary">
+                            <span className="text-accent font-semibold">⚡ Limited spots</span> · 10-Day Ship Sprint
+                        </p>
+                    </div>
+
+                    <div className="mt-12 aspect-video w-full max-w-3xl mx-auto rounded-2xl border border-white/10 bg-surface-secondary p-4 shadow-card overflow-hidden">
                         <iframe src="https://player.vimeo.com/video/902838692?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1"
                             frameBorder="0"
                             allow="autoplay; fullscreen; picture-in-picture"
