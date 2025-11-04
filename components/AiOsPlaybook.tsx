@@ -4,9 +4,20 @@ const AiOsPlaybook: React.FC = () => {
     return (
         <section className="border-b border-border-primary bg-surface-secondary py-16 md:py-20">
             <div className="max-w-6xl mx-auto px-6 lg:px-8">
+                {/* Heading - visible on mobile only */}
+                <h3 className="text-3xl font-bold text-text-primary lg:hidden mb-6">The "AI OS" Playbook</h3>
+                
+                {/* Image - appears after heading on mobile, on right side on desktop */}
+                <div className="lg:hidden mb-8">
+                    <img src="/images/AI-OS-PLAYBOOK-1.png" 
+                         alt="AI OS Playbook - Orchestrating Intelligence" 
+                         className="rounded-2xl border border-white/10 shadow-card" />
+                </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h3 className="text-3xl font-bold text-text-primary">The "AI OS" Playbook</h3>
+                        {/* Heading - visible on desktop only */}
+                        <h3 className="text-3xl font-bold text-text-primary hidden lg:block">The "AI OS" Playbook</h3>
                         <p className="text-lg text-text-secondary mt-6">
                             Our flagship program isn't just a course—it's a complete playbook. We teach you how to build and sell a full "AI Operating System" like our AI Receptionist.
                         </p>
@@ -19,7 +30,8 @@ const AiOsPlaybook: React.FC = () => {
                             </a>
                         </div>
                     </div>
-                    <div>
+                    {/* Image - visible on desktop only */}
+                    <div className="hidden lg:block">
                         <img src="/images/AI-OS-PLAYBOOK-1.png" 
                              alt="AI OS Playbook - Orchestrating Intelligence" 
                              className="rounded-2xl border border-white/10 shadow-card" />
