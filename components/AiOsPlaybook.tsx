@@ -20,8 +20,8 @@ const AiOsPlaybook: React.FC = () => {
                         </div>
                     </div>
                     <div>
-                        <img src="https://placehold.co/600x450/0F1420/3A9EFF?text=AI+Receptionist+Workflow%0A(n8n+Builder)" 
-                             alt="AI OS Workflow in n8n" 
+                        <img src="/images/AI-OS-PLAYBOOK-1.png" 
+                             alt="AI OS Playbook - Orchestrating Intelligence" 
                              className="rounded-2xl border border-white/10 shadow-card" />
                     </div>
                 </div>
