@@ -10,9 +10,9 @@ const SocialProof: React.FC = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
                     <div className="flex justify-center">
-                        <img src="https://placehold.co/256x256/0F1420/F1F5F9?text=Team+of+Experts" 
+                        <img src="/images/Image_fx - 2025-11-04T064940.324.jpg" 
                              alt="Team of AI Experts" 
-                             className="rounded-full w-64 h-64 ring-4 ring-primary shadow-primary" />
+                             className="rounded-full w-64 h-64 object-cover ring-4 ring-primary shadow-primary" />
                     </div>
                     <div>
                         <p className="text-lg text-text-secondary mb-6">This campus is led by a team of active AI agency consultants. You get the benefit of a curriculum built from real-world client work, not just theory.</p>

@@ -28,14 +28,12 @@ const Hero: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="mt-12 aspect-video w-full max-w-3xl mx-auto rounded-2xl border border-white/10 bg-surface-secondary p-4 shadow-card overflow-hidden">
-                        <iframe src="https://player.vimeo.com/video/902838692?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1"
-                            frameBorder="0"
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            style={{ width: '100%', height: '100%' }}
-                            className="rounded-xl"
-                            title="Sloe AI Campus VSL">
-                        </iframe>
+                    <div className="mt-12 w-full max-w-3xl mx-auto rounded-2xl border border-white/10 bg-surface-secondary p-4 shadow-card overflow-hidden">
+                        <img 
+                            src="/images/AI-systems-1.jpg" 
+                            alt="AI Systems and Neural Networks" 
+                            className="w-full h-auto rounded-xl"
+                        />
                     </div>
                 </div>
             </div>

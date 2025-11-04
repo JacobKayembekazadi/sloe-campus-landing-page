@@ -8,7 +8,7 @@ const WhatsInside: React.FC = () => {
                 <h2 className="text-4xl font-bold text-center text-text-primary">What You Get Inside the Studio</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16">
                     <div>
-                        <img src="https://placehold.co/600x400/0F1420/F1F5F9?text=Sloe+AI+Campus+Dashboard"
+                        <img src="/images/sloe-campus-dashboard-2.png"
                              alt="Sloe AI Campus Dashboard"
                              className="rounded-2xl border border-white/10 shadow-card" />
                     </div>
