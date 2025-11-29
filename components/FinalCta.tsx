@@ -1,4 +1,5 @@
 import React from 'react';
+import CheckoutLink from './CheckoutLink';
 
 const FinalCta: React.FC = () => {
     return (
@@ -15,9 +16,9 @@ const FinalCta: React.FC = () => {
                             </p>
                         </div>
                         <div className="flex items-center md:justify-end">
-                            <a href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-semibold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
+                            <CheckoutLink href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-semibold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
                                 Start Building
-                            </a>
+                            </CheckoutLink>
                         </div>
                     </div>
                 </div>

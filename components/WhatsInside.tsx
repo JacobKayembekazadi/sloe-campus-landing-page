@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckIcon } from './icons';
+import CheckoutLink from './CheckoutLink';
 
 const WhatsInside: React.FC = () => {
     return (
@@ -26,9 +27,9 @@ const WhatsInside: React.FC = () => {
                 </div>
                 
                 <div className="mt-16 text-center">
-                    <a href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-xl font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
+                    <CheckoutLink href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-xl font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
                         Get Full Access for $49/month
-                    </a>
+                    </CheckoutLink>
                     <p className="text-sm text-text-secondary mt-3">Everything included · No hidden fees · Cancel anytime</p>
                 </div>
             </div>

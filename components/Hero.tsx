@@ -1,4 +1,5 @@
 import React from 'react';
+import CheckoutLink from './CheckoutLink';
 
 const Hero: React.FC = () => {
     return (
@@ -20,9 +21,9 @@ const Hero: React.FC = () => {
                     </p>
 
                     <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
+                        <CheckoutLink href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
                             Join the Campus – $49/month
-                        </a>
+                        </CheckoutLink>
                         <p className="text-sm text-text-secondary">
                             <span className="text-accent font-semibold">⚡ Limited spots</span> · 10-Day Ship Sprint
                         </p>

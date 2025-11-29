@@ -1,4 +1,5 @@
 import React from 'react';
+import CheckoutLink from './CheckoutLink';
 
 const ProblemAgitation: React.FC = () => {
     return (
@@ -16,9 +17,9 @@ const ProblemAgitation: React.FC = () => {
                 </p>
                 
                 <div className="mt-10">
-                    <a href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
+                    <CheckoutLink href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
                         Break Free – Join the Campus
-                    </a>
+                    </CheckoutLink>
                 </div>
             </div>
         </section>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CheckoutLink from './CheckoutLink';
 
 const CtaReveal: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -21,9 +22,9 @@ const CtaReveal: React.FC = () => {
                 <p className="text-lg text-text-secondary mt-4">
                     Get the exact playbooks, tools, and live support from our 'AI Studio' community to go from builder to business in 10 days.
                 </p>
-                <a href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 mt-8 rounded-[12px] bg-primary px-8 py-4 text-xl font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35 animate-pulse-slow">
+                <CheckoutLink href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 mt-8 rounded-[12px] bg-primary px-8 py-4 text-xl font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35 animate-pulse-slow">
                     Join for $49/month
-                </a>
+                </CheckoutLink>
                 <p className="text-sm text-warning mt-4 font-medium">
                     The 10-day challenge is a live, cohort-based sprint. Spots are limited.
                 </p>

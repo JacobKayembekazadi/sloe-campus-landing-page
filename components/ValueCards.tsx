@@ -1,5 +1,6 @@
 import React from 'react';
 import { WebsiteIcon, AiOsIcon, BusinessToolsIcon } from './icons';
+import CheckoutLink from './CheckoutLink';
 
 const ValueCards: React.FC = () => {
     return (
@@ -37,9 +38,9 @@ const ValueCards: React.FC = () => {
                 </div>
                 
                 <div className="mt-12 text-center">
-                    <a href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
+                    <CheckoutLink href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
                         Start Learning These Skills Now
-                    </a>
+                    </CheckoutLink>
                     <p className="text-sm text-text-secondary mt-3">Full access for $49/month · Cancel anytime</p>
                 </div>
             </div>
