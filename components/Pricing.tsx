@@ -4,7 +4,7 @@ const Pricing: React.FC = () => {
     return (
         <section id="pricing" className="py-24 lg:py-32">
             <div className="max-w-3xl mx-auto text-center px-6 lg:px-8">
-                <h2 className="text-4xl font-bold text-text-primary">Your 10-Day Path to an AI-Proof Career</h2>
+                <h2 className="text-4xl font-bold text-text-primary">Your 7-Day Path to a Monetizable AI Skill</h2>
                 
                 <div id="price-display" className="mt-8">
                     <div className="flex justify-center items-baseline gap-x-2">

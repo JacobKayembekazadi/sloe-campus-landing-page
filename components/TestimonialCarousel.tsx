@@ -1,109 +1,93 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from './icons';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Quote, Star, CheckCircle2 } from 'lucide-react';
 
 const testimonials = [
     {
         quote: "This isn't just a course, it's a playbook. I landed my first $2k/mo client for an AI OS just 3 weeks after joining. Insane value.",
         name: "Alex S.",
         title: "Agency Owner",
-        avatar: "https://placehold.co/48x48/0F1420/F1F5F9?text=AS"
+        initials: "AS",
+        gradient: "from-blue-500 to-cyan-400"
     },
     {
         quote: "The n8n workflows alone are worth 10x the price. I automated my own business, then started selling the service to others.",
         name: "Maria J.",
         title: "Freelancer",
-        avatar: "https://placehold.co/48x48/0F1420/F1F5F9?text=MJ"
+        initials: "MJ",
+        gradient: "from-purple-500 to-pink-500"
     },
     {
         quote: "I finally understand how to *sell* AI. The 'Client-Hunter' calls and sales scripts are pure gold. I'm not a 'tech guy' but I'm closing deals.",
         name: "David B.",
         title: "Career Pivoter",
-        avatar: "https://placehold.co/48x48/0F1420/F1F5F9?text=DB"
+        initials: "DB",
+        gradient: "from-emerald-500 to-teal-400"
     }
 ];
 
+const TestimonialCard = ({ data, delay }: { data: typeof testimonials[0], delay: number }) => (
+    <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay }}
+        className="group relative bg-surface-secondary border border-border-primary p-8 rounded-3xl hover:border-primary/30 transition-colors shadow-card hover:shadow-primary-lg"
+    >
+        <div className="absolute top-6 right-8 opacity-20 group-hover:opacity-40 transition-opacity">
+            <Quote className="w-10 h-10 text-text-primary" />
+        </div>
+
+        <div className="flex items-center gap-1 mb-6">
+            {[1,2,3,4,5].map(i => (
+                <Star key={i} className="w-4 h-4 fill-warning text-warning" />
+            ))}
+        </div>
+
+        <p className="text-lg font-medium text-text-primary mb-8 relative z-10 leading-relaxed">
+            "{data.quote}"
+        </p>
+
+        <div className="flex items-center gap-4 border-t border-border-primary pt-6">
+            <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${data.gradient} flex items-center justify-center text-white font-bold text-lg shadow-lg`}>
+                {data.initials}
+            </div>
+            <div>
+                <div className="flex items-center gap-2">
+                    <h4 className="font-bold text-text-primary">{data.name}</h4>
+                    <CheckCircle2 className="w-4 h-4 text-accent" />
+                </div>
+                <p className="text-sm text-text-secondary">{data.title}</p>
+            </div>
+        </div>
+    </motion.div>
+);
+
 const TestimonialCarousel: React.FC = () => {
-    const [currentIndex, setCurrentIndex] = useState(1);
-    const trackRef = useRef<HTMLDivElement>(null);
-    const transitionRef = useRef(true);
-
-    const slides = [testimonials[testimonials.length - 1], ...testimonials, testimonials[0]];
-
-    const handleNext = useCallback(() => {
-        if (!transitionRef.current) return;
-        setCurrentIndex(prev => prev + 1);
-        transitionRef.current = true;
-    }, []);
-
-    const handlePrev = () => {
-        if (!transitionRef.current) return;
-        setCurrentIndex(prev => prev - 1);
-        transitionRef.current = true;
-    };
-
-    useEffect(() => {
-        const track = trackRef.current;
-        if (!track) return;
-
-        if (currentIndex === slides.length - 1) {
-            const timer = setTimeout(() => {
-                transitionRef.current = false;
-                setCurrentIndex(1);
-            }, 500);
-            return () => clearTimeout(timer);
-        }
-
-        if (currentIndex === 0) {
-            const timer = setTimeout(() => {
-                transitionRef.current = false;
-                setCurrentIndex(slides.length - 2);
-            }, 500);
-            return () => clearTimeout(timer);
-        }
-    }, [currentIndex, slides.length]);
-    
-    useEffect(() => {
-        const interval = setInterval(() => {
-            handleNext();
-        }, 5000);
-        return () => clearInterval(interval);
-    }, [handleNext]);
-
     return (
-        <div className="mt-20 relative">
-            <h3 className="text-3xl font-bold text-center text-text-primary mb-12">Real Wins from Real Builders</h3>
-            <div className="w-full overflow-hidden">
-                <div 
-                    ref={trackRef} 
-                    className="flex"
-                    style={{ 
-                        transform: `translateX(-${currentIndex * 100}%)`,
-                        transition: transitionRef.current ? 'transform 0.5s ease-in-out' : 'none'
-                    }}
-                >
-                    {slides.map((testimonial, index) => (
-                        <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-                            <div className="rounded-2xl border border-border-secondary bg-surface-tertiary p-8 h-full flex flex-col shadow-card">
-                                <p className="text-lg italic text-text-primary flex-grow">"{testimonial.quote}"</p>
-                                <div className="flex items-center mt-6">
-                                    <img src={testimonial.avatar} alt={`Avatar of ${testimonial.name}`} className="w-12 h-12 rounded-full ring-2 ring-primary" />
-                                    <div className="ml-4">
-                                        <p className="font-bold text-text-primary">{testimonial.name}</p>
-                                        <p className="text-sm text-text-secondary">{testimonial.title}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <section className="border-b border-border-primary bg-surface-primary py-20 md:py-32">
+            <div className="max-w-6xl mx-auto px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <motion.h2 
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-3xl md:text-5xl font-bold text-text-primary mb-6"
+                    >
+                        Real Wins from <span className="text-accent">Real Builders</span>
+                    </motion.h2>
+                    <p className="text-lg text-text-secondary">
+                        Join hundreds of others who are shipping real projects.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    {testimonials.map((t, i) => (
+                        <TestimonialCard key={i} data={t} delay={i * 0.1} />
                     ))}
                 </div>
             </div>
-            <button onClick={handlePrev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-surface-primary/50 hover:bg-surface-primary p-2 rounded-full transition-colors hidden md:block">
-                <ChevronLeftIcon />
-            </button>
-            <button onClick={handleNext} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-surface-primary/50 hover:bg-surface-primary p-2 rounded-full transition-colors hidden md:block">
-                <ChevronRightIcon />
-            </button>
-        </div>
+        </section>
     );
 };
 

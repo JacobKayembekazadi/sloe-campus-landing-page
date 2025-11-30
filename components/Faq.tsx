@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { PlusIcon, MinusIcon } from './icons';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Plus, Minus, MessageCircle } from 'lucide-react';
 import CheckoutLink from './CheckoutLink';
 
 const faqData = [
@@ -16,46 +17,65 @@ const faqData = [
         answer: "Yes. This is the *entire point* of the campus. We don't just teach you how to build; we teach you how to monetize. You get the exact sales scripts, pricing models, and proposal templates we use to land $2k-$5k clients."
     },
     {
-        question: 'Why a 10-day "challenge"?',
-        answer: "Because we value action over theory. This isn't a passive course you \"might\" finish. The 10-day goal is an intense sprint designed to get you a tangible result: a deployed product and the assets to find your first client. It's about building momentum."
+        question: 'Why a 7-day sprint?',
+        answer: "Because we value action over theory. This isn't a passive course you \"might\" finish. The 7-day sprint is designed to get you a tangible result: one monetizable AI skill and a live project you can deploy. It's about focused building, not endless learning."
+    },
+    {
+        question: "What if I'm not technical?",
+        answer: "Perfect. This is designed for non-coders and light-technical builders. You'll use beginner-friendly tools like Shopify's visual editor, simple code helpers like Cursor, and platforms like Vercel that handle the technical complexity. We focus on building, not coding."
     }
 ];
 
-interface FaqItemProps {
-    item: { question: string; answer: string };
-    isOpen: boolean;
-    onClick: () => void;
-}
-
-const FaqItem: React.FC<FaqItemProps> = ({ item, isOpen, onClick }) => {
+const FaqItem = ({ item, isOpen, onClick }: { item: { question: string; answer: string }; isOpen: boolean; onClick: () => void }) => {
     return (
-        <div className="rounded-2xl border border-border-secondary bg-surface-secondary">
-            <button onClick={onClick} className="faq-toggle flex justify-between items-center w-full p-6 text-left">
-                <span className="text-lg font-medium text-text-primary">{item.question}</span>
-                <span className="faq-icon text-primary">
-                    {isOpen ? <MinusIcon /> : <PlusIcon />}
+        <div className={`border rounded-2xl transition-colors duration-300 ${isOpen ? 'bg-surface-secondary border-primary/50' : 'bg-transparent border-border-secondary hover:border-primary/30'}`}>
+            <button onClick={onClick} className="flex justify-between items-center w-full p-6 text-left focus:outline-none">
+                <span className={`text-lg font-bold transition-colors ${isOpen ? 'text-primary' : 'text-text-primary'}`}>
+                    {item.question}
+                </span>
+                <span className={`p-2 rounded-full transition-colors ${isOpen ? 'bg-primary/10 text-primary' : 'bg-surface-tertiary text-text-secondary'}`}>
+                    {isOpen ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                 </span>
             </button>
-            <div className={`faq-panel px-6 text-text-secondary transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'pb-6 max-h-96' : 'max-h-0'}`}>
-                <p>{item.answer}</p>
-            </div>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                    >
+                        <div className="px-6 pb-6 text-text-secondary leading-relaxed">
+                            {item.answer}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };
 
-
 const Faq: React.FC = () => {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     const handleToggle = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
     return (
-        <section className="border-b border-border-primary bg-surface-primary py-16 md:py-20">
-            <div className="max-w-3xl mx-auto px-6 lg:px-8">
-                <h2 className="text-4xl font-bold text-center text-text-primary">Frequently Asked Questions</h2>
-                <div className="mt-12 space-y-4">
+        <section className="border-b border-border-primary bg-surface-primary py-20 md:py-32">
+            <div className="max-w-4xl mx-auto px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
+                        Frequently Asked Questions
+                    </h2>
+                    <p className="text-lg text-text-secondary">
+                        Have a different question? <a href="mailto:hello@sloe.ai" className="text-primary hover:underline">Email us</a>.
+                    </p>
+                </div>
+
+                <div className="space-y-4 mb-16">
                     {faqData.map((item, index) => (
                         <FaqItem 
                             key={index}
@@ -66,11 +86,19 @@ const Faq: React.FC = () => {
                     ))}
                 </div>
                 
-                <div className="mt-12 text-center">
-                    <CheckoutLink href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="inline-flex items-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
-                        Ready to Start? Join Now
+                <div className="bg-surface-secondary border border-border-primary rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div className="flex items-center gap-4">
+                        <div className="p-4 bg-surface-tertiary rounded-2xl">
+                            <MessageCircle className="w-8 h-8 text-primary" />
+                        </div>
+                        <div>
+                            <h4 className="text-xl font-bold text-text-primary">Still have questions?</h4>
+                            <p className="text-text-secondary">We're happy to help you decide if this is right for you.</p>
+                        </div>
+                    </div>
+                    <CheckoutLink href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="whitespace-nowrap px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary-hover transition-colors shadow-primary">
+                        Join the Campus
                     </CheckoutLink>
-                    <p className="text-sm text-text-secondary mt-3">Questions answered? Let's build 🚀</p>
                 </div>
             </div>
         </section>

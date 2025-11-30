@@ -87,3 +87,14 @@ export const trackLead = (params?: Record<string, unknown>) => {
   trackEvent('Lead', params);
 };
 
+/**
+ * Track when a lead magnet is downloaded
+ */
+export const trackLeadMagnetDownload = (contentName: string = '7-Day AI Skill Map') => {
+  trackEvent('Lead', {
+    content_name: contentName,
+    content_category: 'Lead Magnet',
+    event_source: 'lead_magnet_download',
+  });
+};
+
