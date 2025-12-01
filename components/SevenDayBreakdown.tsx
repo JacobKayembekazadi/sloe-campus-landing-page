@@ -90,7 +90,7 @@ const pathData: Record<PathType, { name: string; description: string; breakdown:
     ],
   },
   website: {
-    name: 'AI-Powered Website',
+    name: 'AI Powered Website',
     description: 'Plan, design, and deploy a live website with AI help, plus optional automations.',
     breakdown: [
       {

@@ -6,7 +6,7 @@ import CheckoutLink from './CheckoutLink';
 const faqData = [
     {
         question: "What if I can't code?",
-        answer: "No problem. This campus is built for builders, not just coders. Our 'AI Operating System' course relies on no-code/low-code tools like n8n and Make.com. The website course uses AI-assisted tools. We focus on logic and strategy, not complex code."
+        answer: "No problem. This campus is built for builders, not just coders. Our 'AI Operating System' course relies on no-code/low-code tools like n8n and Make.com. The website course uses AI assisted tools. We focus on logic and strategy, not complex code."
     },
     {
         question: "What if I get stuck?",

@@ -55,7 +55,7 @@
 - **Days 3-4:** Build a very simple web dashboard using a code editor (Cursor), store the code on GitHub, and connect it to something familiar like Google Sheets or Airtable so the business can see and update their data.
 - **Days 5-7:** Add one or two small "smart" features (like reminders, summaries, or filters), host the tool on a beginner-friendly platform like Vercel so it has a live link, and document how a real estate agent or lawyer would use it in their week.
 
-### 3. AI-Powered Website in 7 Days
+### 3. AI Powered Website in 7 Days
 
 **What they learn:** Use Gemini to plan the pages and write draft copy, use Pinterest for design ideas, then build and launch the site using Cursor, GitHub, and Vercel (a simple hosting platform for websites).
 

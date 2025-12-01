@@ -173,10 +173,10 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({ isOpen, onClose }) =>
               </svg>
             </div>
             <h2 className="text-2xl font-bold text-text-primary mb-2">
-              Success! Check Your Email
+              Success! Your Download is Ready
             </h2>
             <p className="text-text-secondary mb-6">
-              We've sent your 7-Day AI Skill Map to your inbox. If you don't see it, check your spam folder.
+              Your 7-Day AI Build Sprint Map is ready for instant download. Click the button below to get it now!
             </p>
             {downloadUrl && (
               <button
