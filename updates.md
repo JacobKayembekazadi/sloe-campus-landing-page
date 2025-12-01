@@ -18,7 +18,7 @@ Complete UI/UX overhaul of the landing page to align with "Sloe AI Campus" premi
   - **Features:** 3 interactive cards ("Passive Consumer", "Idea Hoarder", "Opportunity Cost") with staggered reveal animations.
 - **`WhoItsFor.tsx`:**
   - **Change:** Refactored to a **Dual Persona Layout**.
-  - **Features:** Distinct cards for "The Ambitious Non-Coder" vs. "The Technical Builder" with benefit checklists.
+  - **Features:** Distinct cards for "The Ambitious Non-Coder" vs. "The Light-Technical Builder" with benefit checklists.
 
 ### 2. The Solution (The Paths)
 - **`ValueCards.tsx` ("Choose Your Path"):**
@@ -26,9 +26,10 @@ Complete UI/UX overhaul of the landing page to align with "Sloe AI Campus" premi
   - **Visuals:** Color-coded themes (Blue/Purple/Green) for Shopify, Internal Tools, and Web Dev paths.
   - **Additions:** Added "Outcome" blocks and "Value Badges" (e.g., "Beginner Friendly").
 - **`SupportingCopy.tsx` ("In One Focused Week"):**
-  - **Change:** Transformed into a **Transformation Journey Map**.
-  - **Layout:** Horizontal flow with arrow connectors (Master Skill -> Build & Ship -> Package & Offer).
-  - **Mobile:** Implemented responsive vertical stacking with `ArrowDown` icons replacing horizontal arrows.
+  - **Change:** Redesigned into a **"Sprint Roadmap" Timeline**.
+  - **Desktop:** Horizontal "Pipeline" layout with connecting lines and "Phase" badges (01, 02, 03).
+  - **Mobile:** Vertical timeline with a continuous gradient line connecting the steps on the left.
+  - **Visuals:** Glassmorphic icon containers, shadow glows, and staggered entrance animations.
 - **`SevenDayBreakdown.tsx`:**
   - **Mobile Fix:** Converted tab navigation to a horizontally scrollable snap-container (`overflow-x-auto`) to prevent button wrapping/breakage on small screens.
 
@@ -49,6 +50,7 @@ Complete UI/UX overhaul of the landing page to align with "Sloe AI Campus" premi
 - **`AiOsPlaybook.tsx` -> Lead Magnet Section:**
   - **Change:** Repurposed into a **"7-Day Skill Map" Lead Magnet**.
   - **Function:** Now acts as a secondary conversion point ("Not Ready to Join?"). Wired to open `LeadMagnetModal`.
+  - **Update (11/30/2025):** The "Download the Free Map" button has been modified to directly download "The-7-Day-AI-Build-Sprint.pdf" instead of opening the `LeadMagnetModal`. User reported that the direct download functionality is still not working as expected, requiring further investigation.
 - **`WhatsInside.tsx` ("Inside the Studio"):**
   - **Change:** Refactored to a **Bento Grid**.
   - **Features:** 4 distinct cards (Studio, Office Hours, Playbooks, Library) with specific dollar values attached.
@@ -71,3 +73,10 @@ Complete UI/UX overhaul of the landing page to align with "Sloe AI Campus" premi
 - **New Files:** `utils/cn.ts`, `gemini.md`, `updates.md`.
 - **Modified Files:** `App.tsx`, `components/*` (almost all UI components).
 - **Deleted/Replaced:** None (Refactored in place).
+
+## 📝 Copy Refinement
+- **Addressed "AI em dashes" concern:** Conducted a comprehensive review of all copy to remove unnecessary hyphens following "AI".
+  - **`positioning.md`:** Changed "AI-Powered Website" to "AI Powered Website".
+  - **`components/SevenDayBreakdown.tsx`:** Changed "AI-Powered Website" to "AI Powered Website".
+  - **`components/Faq.tsx`:** Changed "AI-assisted tools" to "AI assisted tools".
+- **Rationale:** Improved readability and flow of marketing copy by avoiding excessive hyphenation, while retaining hyphens where grammatically necessary (e.g., for compound adjectives like "AI-driven" if they were present, or when part of a proper noun like "Sloe AI Campus"). Instances of "AI OS", "AI Studio", "AI client", "AI tools", "AI stack", "AI wrappers" were kept as they are either proper nouns, established terms, or naturally two words.
