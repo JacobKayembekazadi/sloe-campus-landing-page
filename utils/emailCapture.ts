@@ -30,9 +30,9 @@ export const submitEmailForLeadMagnet = async (
     };
   }
 
-  // If no API URL is configured, return mock success for development
-  if (!LEAD_MAGNET_API_URL) {
-    console.warn('Lead magnet API URL not configured. Using mock response.');
+  // Mock success for local development if API URL is not set or if we are in DEV mode
+  if (!LEAD_MAGNET_API_URL || import.meta.env.DEV) {
+    console.log('[DEV] Mocking email submission:', email);
     // Simulate API delay
     await new Promise((resolve) => setTimeout(resolve, 1000));
     return {

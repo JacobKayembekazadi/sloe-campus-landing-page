@@ -101,17 +101,23 @@ const AiOsPlaybook: React.FC<AiOsPlaybookProps> = ({ onOpenModal }) => {
                             ))}
                         </ul>
 
-                                                <motion.a
-                                                    initial={{ opacity: 0, y: 20 }}
-                                                    whileInView={{ opacity: 1, y: 0 }}
-                                                    viewport={{ once: true }}
-                                                    transition={{ delay: 0.5 }}
-                                                    href="/The-7-Day-AI-Build-Sprint.pdf"
-                                                    download
-                                                    className="inline-flex items-center gap-2 rounded-xl bg-surface-secondary border border-border-secondary px-8 py-4 text-lg font-bold text-text-primary shadow-sm hover:bg-surface-tertiary hover:border-primary/50 transition-all group"
-                                                >                            <Download className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
+                                                                        <motion.button
+
+                                                                            initial={{ opacity: 0, y: 20 }}
+
+                                                                            whileInView={{ opacity: 1, y: 0 }}
+
+                                                                            viewport={{ once: true }}
+
+                                                                            transition={{ delay: 0.5 }}
+
+                                                                            onClick={onOpenModal}
+
+                                                                            className="inline-flex items-center gap-2 rounded-xl bg-surface-secondary border border-border-secondary px-8 py-4 text-lg font-bold text-text-primary shadow-sm hover:bg-surface-tertiary hover:border-primary/50 transition-all group"
+
+                                                                        >                            <Download className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
                             Download the Free Map
-                        </motion.a>
+                        </motion.button>
                     </div>
                 </div>
             </div>

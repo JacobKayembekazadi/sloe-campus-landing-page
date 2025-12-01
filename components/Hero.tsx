@@ -28,13 +28,12 @@ const Hero: React.FC<HeroProps> = ({ onLeadMagnetClick }) => {
                         <CheckoutLink href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
                             Join the Campus – $49/month
                         </CheckoutLink>
-                        <a
-                            href="/The-7-Day-AI-Build-Sprint.pdf"
-                            download
+                        <button
+                            onClick={onLeadMagnetClick}
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-[12px] border-2 border-primary bg-transparent px-8 py-4 text-lg font-bold text-primary transition-transform hover:translate-y-[-1px] hover:bg-primary/10 focus:outline-none focus:ring-4 focus:ring-primary/35"
                         >
                             Get the 7‑Day AI Skill Map (Free)
-                        </a>
+                        </button>
                     </div>
                     <p className="text-sm text-text-secondary mt-4">
                         <span className="text-accent font-semibold">⚡ Limited spots</span> · 7-Day Ship Sprint
