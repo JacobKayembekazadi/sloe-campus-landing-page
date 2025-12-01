@@ -4,7 +4,7 @@
  * Ready for integration with ConvertKit, Mailchimp, or custom API
  */
 
-const LEAD_MAGNET_API_URL = import.meta.env.VITE_LEAD_MAGNET_API_URL || '';
+const LEAD_MAGNET_API_URL = import.meta.env.VITE_LEAD_MAGNET_API_URL || '/api/subscribe';
 
 export interface EmailCaptureResponse {
   success: boolean;
@@ -38,7 +38,7 @@ export const submitEmailForLeadMagnet = async (
     return {
       success: true,
       message: 'Success! Check your email for the download link.',
-      downloadUrl: '/downloads/7-day-ai-skill-map.pdf', // Placeholder
+      downloadUrl: '/The-7-Day-AI-Build-Sprint.pdf', // Updated lead magnet
     };
   }
 

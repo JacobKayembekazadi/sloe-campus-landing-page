@@ -1,0 +1,2 @@
+# No external dependencies needed for standard library urllib approach
+# But if we deploy to Vercel Python runtime, this file marks it as a Python project
