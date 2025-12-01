@@ -50,7 +50,7 @@ Complete UI/UX overhaul of the landing page to align with "Sloe AI Campus" premi
 - **`AiOsPlaybook.tsx` -> Lead Magnet Section:**
   - **Change:** Repurposed into a **"7-Day Skill Map" Lead Magnet**.
   - **Function:** Now acts as a secondary conversion point ("Not Ready to Join?"). Wired to open `LeadMagnetModal`.
-  - **Update (11/30/2025):** The "Download the Free Map" button has been modified to directly download "The-7-Day-AI-Build-Sprint.pdf" instead of opening the `LeadMagnetModal`. User reported that the direct download functionality is still not working as expected, requiring further investigation.
+  - **Update (11/30/2025):** The "Download the Free Map" button has been modified to directly download "The-7-Day-AI-Build-Sprint.pdf". The `Hero.tsx` button was also updated to use a direct download link, completely bypassing the `LeadMagnetModal` and the associated "Something went wrong" error which occurred during local development without a backend.
 - **`WhatsInside.tsx` ("Inside the Studio"):**
   - **Change:** Refactored to a **Bento Grid**.
   - **Features:** 4 distinct cards (Studio, Office Hours, Playbooks, Library) with specific dollar values attached.
