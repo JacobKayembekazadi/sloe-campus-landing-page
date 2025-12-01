@@ -20,9 +20,13 @@ const Hero: React.FC<HeroProps> = ({ onLeadMagnetClick }) => {
                     <h1 className="text-4xl lg:text-5xl font-extrabold text-text-primary mt-4">
                         Learn a monetizable AI skill and ship a live project in 7 days.
                     </h1>
-                    <p className="text-lg text-text-secondary mt-6 max-w-2xl mx-auto">
-                        For ambitious non‑coders and light‑technical builders who want to stop watching tutorials and ship a real AI project in 7 days.
-                    </p>
+                    <div className="mt-6 w-full max-w-3xl mx-auto rounded-2xl border border-white/10 bg-surface-secondary p-4 shadow-card overflow-hidden">
+                        <img 
+                            src="/images/AI-systems-1.jpg" 
+                            alt="AI Systems and Neural Networks" 
+                            className="w-full h-auto rounded-xl"
+                        />
+                    </div>
 
                     <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                         <CheckoutLink href="https://sloe-ai-campus-90df68.circle.so/checkout/sloe-ai-campus" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-[12px] bg-primary px-8 py-4 text-lg font-bold text-white shadow-primary transition-transform hover:translate-y-[-1px] hover:bg-primary-hover focus:outline-none focus:ring-4 focus:ring-primary/35">
@@ -39,13 +43,7 @@ const Hero: React.FC<HeroProps> = ({ onLeadMagnetClick }) => {
                         <span className="text-accent font-semibold">⚡ Limited spots</span> · 7-Day Ship Sprint
                     </p>
 
-                    <div className="mt-12 w-full max-w-3xl mx-auto rounded-2xl border border-white/10 bg-surface-secondary p-4 shadow-card overflow-hidden">
-                        <img 
-                            src="/images/AI-systems-1.jpg" 
-                            alt="AI Systems and Neural Networks" 
-                            className="w-full h-auto rounded-xl"
-                        />
-                    </div>
+
                 </div>
             </div>
         </section>
